@@ -1,0 +1,24 @@
+# Physics-Informed Neural Networks (PINNs) integrate physical laws directly into the training 
+# process of neural networks to solve problems in fluid dynamics and other physics-based domains. 
+# By embedding governing equations such as the Euler equations into the neural network's loss function, 
+# the model is trained to predict physical quantities like density, velocity, and pressure, while ensuring 
+# the predictions obey the underlying physical laws. This approach allows PINNs to tackle both forward 
+# problems, where all initial and boundary conditions are known, and inverse problems, where only partial 
+# or sparse data is available, making them a powerful tool for scenarios where traditional numerical methods 
+# face limitations, especially in high-speed flow simulations.
+
+# The core working of the PINN model involves training the network using two types of losses: 
+# data loss and physics loss. Data loss ensures that the network’s predictions match known data points 
+# (e.g., experimental results or boundary conditions), while the physics loss enforces the conservation 
+# laws of mass, momentum, and energy by using automatic differentiation to compute the residuals of the 
+# governing equations. This dual loss framework allows the model to handle complex problems, such as those 
+# involving shock waves or discontinuities, with a reduced need for large amounts of labeled data, making PINNs 
+# particularly effective for inverse problems like inferring hidden states or physical parameters from sparse observations.
+
+# The use of this model is highly relevant in fields like aerospace engineering, automotive design, and 
+# environmental science, where fluid dynamics plays a crucial role. For example, PINNs can be used to model 
+# high-speed airflows around aircraft or vehicles, predict shock waves, or infer aerodynamic properties from 
+# limited experimental data. Additionally, in atmospheric or oceanic flows, where gathering real-time data is 
+# difficult, PINNs can be applied to predict missing variables by leveraging known physical laws. This combination 
+# of data-driven learning and theory-driven constraints makes PINNs a valuable tool for solving practical, 
+# real-world problems across various scientific and engineering disciplines.
